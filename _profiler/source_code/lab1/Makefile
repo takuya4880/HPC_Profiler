@@ -1,7 +1,8 @@
 # Copyright (c) 2020 NVIDIA Corporation.  All rights reserved. 
 
 CC := nvc++
-CFLAGS := -O3 -w -ldl
+NVTX_INC := -I/shared/software/hpc_sdk/Linux_aarch64/26.3/cuda/13.1/targets/sbsa-linux/include
+CFLAGS := -O3 -w -ldl $(NVTX_INC)
 ACCFLAGS := -Minfo=accel
 
 FC := nvfortran
